@@ -19,6 +19,9 @@
   <action id="GotoBookmark7" />
   <action id="GotoChangedFile" />
   <action id="GotoClass" />
+  <action id="Help.KeymapReference">
+    <keyboard-shortcut first-keystroke="ctrl alt k" />
+  </action>
   <action id="ReformatCode">
     <keyboard-shortcut first-keystroke="ctrl alt l" />
     <keyboard-shortcut first-keystroke="ctrl 0" />

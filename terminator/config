@@ -5,6 +5,7 @@
   suppress_multiple_term_dialog = True
 [keybindings]
   toggle_zoom = <Shift><Alt>m
+  search = <Shift><Alt>f
   copy = <Shift><Alt>i
   paste = <Shift><Alt>p
   go_up = <Alt>i
@@ -28,7 +29,6 @@
     background_image = None
     background_darkness = 0.92
     urgent_bell = True
-    cursor_shape = ibeam
     use_system_font = False
     cursor_color = "#ff00de"
     foreground_color = "#000000"
@@ -42,7 +42,6 @@
     visible_bell = True
     background_image = None
     urgent_bell = True
-    cursor_shape = ibeam
     use_system_font = False
     cursor_color = "#ffffff"
     foreground_color = "#ff58db"

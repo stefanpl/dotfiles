@@ -1,26 +1,52 @@
 [global_config]
   title_transmit_bg_color = "#000000"
+  inactive_color_offset = 0.71
   title_transmit_fg_color = "#00ff05"
+  suppress_multiple_term_dialog = True
 [keybindings]
-  cycle_prev = <Shift><Alt>k
-  next_tab = <Shift><Alt>l
-  split_horiz = <Shift><Alt>o
-  prev_tab = <Shift><Alt>h
-  close_term = <Shift><Alt>w
-  cycle_next = <Shift><Alt>j
-  new_tab = <Shift><Alt>t
-  split_vert = <Shift><Alt>e
+  toggle_zoom = <Shift><Alt>m
   copy = <Shift><Alt>i
   paste = <Shift><Alt>p
+  go_up = <Alt>i
+  resize_up = <Alt>Up
+  resize_left = <Alt>Left
+  split_horiz = <Shift><Alt>o
+  go_prev = <Primary>e
+  prev_tab = <Shift><Alt>h
+  go_down = <Alt>k
+  close_term = <Shift><Alt>w
+  split_vert = <Shift><Alt>e
+  go_right = <Alt>l
+  new_tab = <Shift><Alt>t
+  go_left = <Alt>j
+  resize_right = <Alt>Right
+  resize_down = <Alt>Down
+  next_tab = <Shift><Alt>l
 [profiles]
   [[default]]
-    use_system_font = False
-    background_darkness = 0.86
-    background_type = transparent
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
     background_image = None
-    cursor_color = "#a00808"
-    foreground_color = "#ff7b00"
+    background_darkness = 0.92
+    background_type = transparent
+    use_system_font = False
+    cursor_color = "#00ff0d"
+    foreground_color = "#ffffff"
+    scroll_on_output = False
+    cursor_shape = underline
     font = Droid Sans Mono 12
+    scrollback_infinite = True
+  [[dark]]
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    visible_bell = True
+    background_image = None
+    urgent_bell = True
+    cursor_shape = ibeam
+    use_system_font = False
+    cursor_color = "#ffffff"
+    foreground_color = "#ff58db"
+    scroll_on_output = False
+    font = Liberation Mono 14
+    background_color = "#181818"
     scrollback_infinite = True
 [layouts]
   [[default]]
@@ -28,7 +54,43 @@
       type = Terminal
       parent = window0
       profile = default
+      command = ""
     [[[window0]]]
       type = Window
       parent = ""
+  [[3ofem]]
+    [[[child0]]]
+      position = 0:0
+      type = Window
+      order = 0
+      parent = ""
+      size = 1920, 1080
+    [[[child1]]]
+      position = 960
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[child3]]]
+      position = 540
+      type = VPaned
+      order = 1
+      parent = child1
+    [[[terminal2]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child1
+      command = ""
+    [[[terminal5]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child3
+      command = htop
+    [[[terminal4]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child3
+      command = ""
 [plugins]

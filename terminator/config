@@ -27,13 +27,15 @@
     palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
     background_image = None
     background_darkness = 0.92
-    background_type = transparent
+    urgent_bell = True
+    cursor_shape = ibeam
     use_system_font = False
-    cursor_color = "#00ff0d"
-    foreground_color = "#ffffff"
+    cursor_color = "#ff00de"
+    foreground_color = "#000000"
     scroll_on_output = False
-    cursor_shape = underline
-    font = Droid Sans Mono 12
+    font = DejaVu Sans Mono 13
+    background_color = "#f3f3f3"
+    audible_bell = True
     scrollback_infinite = True
   [[dark]]
     palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"

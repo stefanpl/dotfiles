@@ -1,4 +1,10 @@
 <keymap version="1" name="stefanpl_keymap" parent="Default for XWin">
+  <action id="$LRU">
+    <keyboard-shortcut first-keystroke="ctrl alt p" />
+  </action>
+  <action id="ActivateDatabaseToolWindow">
+    <keyboard-shortcut first-keystroke="alt 5" />
+  </action>
   <action id="ActivateDebugToolWindow">
     <keyboard-shortcut first-keystroke="alt 2" />
   </action>
@@ -13,6 +19,7 @@
     <keyboard-shortcut first-keystroke="ctrl f4" />
     <keyboard-shortcut first-keystroke="ctrl w" />
   </action>
+  <action id="CodeInspection.OnEditor" />
   <action id="CommentByLineComment">
     <keyboard-shortcut first-keystroke="ctrl slash" />
     <keyboard-shortcut first-keystroke="ctrl divide" />
@@ -27,9 +34,33 @@
     <keyboard-shortcut first-keystroke="shift f9" />
     <keyboard-shortcut first-keystroke="shift alt k" />
   </action>
+  <action id="Editor LRU">
+    <keyboard-shortcut first-keystroke="ctrl alt p" />
+  </action>
+  <action id="EditorAddOrRemoveCaret">
+    <mouse-shortcut keystroke="alt button1" />
+    <mouse-shortcut keystroke="control button1" />
+  </action>
   <action id="EditorSelectWord" />
+  <action id="EvaluateExpression">
+    <keyboard-shortcut first-keystroke="alt f8" />
+    <keyboard-shortcut first-keystroke="shift alt e" />
+  </action>
+  <action id="ExpressionTypeInfo" />
   <action id="FileChooser.NewFolder">
     <keyboard-shortcut first-keystroke="alt insert" />
+  </action>
+  <action id="FileChooser.TogglePathShowing" />
+  <action id="FileStructurePopup">
+    <keyboard-shortcut first-keystroke="ctrl f12" />
+    <keyboard-shortcut first-keystroke="alt m" />
+  </action>
+  <action id="FindUsages">
+    <keyboard-shortcut first-keystroke="alt f7" />
+    <keyboard-shortcut first-keystroke="alt u" />
+  </action>
+  <action id="FixDocComment">
+    <keyboard-shortcut first-keystroke="ctrl alt o" />
   </action>
   <action id="Forward">
     <keyboard-shortcut first-keystroke="ctrl alt right" />
@@ -40,10 +71,20 @@
     <keyboard-shortcut first-keystroke="alt insert" />
     <keyboard-shortcut first-keystroke="alt enter" />
   </action>
+  <action id="GotoAction">
+    <keyboard-shortcut first-keystroke="shift ctrl a" />
+    <keyboard-shortcut first-keystroke="shift ctrl p" />
+  </action>
   <action id="GotoBookmark0" />
   <action id="GotoBookmark7" />
   <action id="GotoChangedFile" />
   <action id="GotoClass" />
+  <action id="GotoDeclaration">
+    <keyboard-shortcut first-keystroke="ctrl b" />
+  </action>
+  <action id="GotoFile">
+    <keyboard-shortcut first-keystroke="ctrl p" />
+  </action>
   <action id="GotoTest" />
   <action id="Help.KeymapReference">
     <keyboard-shortcut first-keystroke="ctrl alt k" />
@@ -57,8 +98,12 @@
   <action id="NextTab">
     <keyboard-shortcut first-keystroke="shift alt l" />
   </action>
+  <action id="OptimizeImports" />
+  <action id="ParameterInfo">
+    <keyboard-shortcut first-keystroke="shift alt p" />
+  </action>
   <action id="PhpGeneratePhpDocBlocks">
-    <keyboard-shortcut first-keystroke="ctrl alt p" />
+    <keyboard-shortcut first-keystroke="shift alt d" />
   </action>
   <action id="PreviousTab">
     <keyboard-shortcut first-keystroke="shift alt h" />
@@ -70,14 +115,39 @@
   <action id="ReopenClosedTab">
     <keyboard-shortcut first-keystroke="shift ctrl t" />
   </action>
+  <action id="Resume">
+    <keyboard-shortcut first-keystroke="f9" />
+    <keyboard-shortcut first-keystroke="shift alt z" />
+  </action>
   <action id="Run">
     <keyboard-shortcut first-keystroke="shift f10" />
     <keyboard-shortcut first-keystroke="shift alt j" />
   </action>
-  <action id="ShowIntentionActions" />
+  <action id="RunToCursor">
+    <keyboard-shortcut first-keystroke="alt f9" />
+    <keyboard-shortcut first-keystroke="shift alt #10000d6" />
+  </action>
+  <action id="ShowIntentionActions">
+    <keyboard-shortcut first-keystroke="alt i" />
+  </action>
+  <action id="StepInto">
+    <keyboard-shortcut first-keystroke="f7" />
+    <keyboard-shortcut first-keystroke="shift alt i" />
+  </action>
+  <action id="StepOut">
+    <keyboard-shortcut first-keystroke="shift f8" />
+    <keyboard-shortcut first-keystroke="shift alt o" />
+  </action>
+  <action id="StepOver">
+    <keyboard-shortcut first-keystroke="f8" />
+    <keyboard-shortcut first-keystroke="shift alt u" />
+  </action>
   <action id="Stop">
     <keyboard-shortcut first-keystroke="ctrl f2" />
     <keyboard-shortcut first-keystroke="shift alt n" />
+  </action>
+  <action id="SurroundWithEmmet">
+    <keyboard-shortcut first-keystroke="shift alt w" />
   </action>
   <action id="SwitchApply">
     <keyboard-shortcut first-keystroke="shift alt enter" />
@@ -99,5 +169,9 @@
   <action id="editRunConfigurations">
     <keyboard-shortcut first-keystroke="shift alt f12" />
   </action>
+  <action id="hg4idea.QFold" />
+  <action id="hg4idea.QPushAction" />
+  <action id="org.intellij.plugins.markdown.ui.actions.editorLayout.CyclicSplitLayoutChangeAction" />
+  <action id="tasks.close" />
   <action id="tasks.goto" />
 </keymap>

@@ -1,6 +1,6 @@
 [global_config]
   title_transmit_bg_color = "#000000"
-  inactive_color_offset = 0.46
+  inactive_color_offset = 0.74
   title_transmit_fg_color = "#00ff05"
   suppress_multiple_term_dialog = True
 [keybindings]
@@ -25,22 +25,9 @@
   next_tab = <Shift><Alt>l
 [profiles]
   [[default]]
-    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     background_image = None
-    background_darkness = 0.92
-    urgent_bell = True
-    use_system_font = False
-    cursor_color = "#ff00de"
-    foreground_color = "#000000"
-    scroll_on_output = False
-    font = DejaVu Sans Mono 13
-    background_color = "#f3f3f3"
-    audible_bell = True
-    scrollback_infinite = True
-  [[dark]]
-    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
-    visible_bell = True
-    background_image = None
+    custom_command = terminator --working-dir=/home/stefan/shortcuts
     urgent_bell = True
     use_system_font = False
     cursor_color = "#ffffff"

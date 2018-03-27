@@ -13,16 +13,16 @@
   resize_left = <Alt>Left
   split_horiz = <Shift><Alt>o
   go_prev = <Primary>e
-  prev_tab = <Shift><Alt>h
+  prev_tab = <Primary><Shift>Tab
   go_down = <Alt>k
   close_term = <Shift><Alt>w
   split_vert = <Shift><Alt>e
   go_right = <Alt>l
-  new_tab = <Shift><Alt>t
+  new_tab = <Primary>t
   go_left = <Alt>j
   resize_right = <Alt>Right
   resize_down = <Alt>Down
-  next_tab = <Shift><Alt>l
+  next_tab = <Primary>Tab
 [profiles]
   [[default]]
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"

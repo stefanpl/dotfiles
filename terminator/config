@@ -75,7 +75,7 @@
     background_image = None
     cursor_color = "#ffffff"
     custom_command = terminator --working-dir=/home/stefan/shortcuts
-    font = Noto Mono 16
+    font = Noto Mono 14
     foreground_color = "#ff58db"
     palette = "#71e2ff:#dc322f:#859900:#00d8b4:#268bd2:#d33682:#0dce00:#eee8d5:#b6f0ff:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     scroll_on_output = False

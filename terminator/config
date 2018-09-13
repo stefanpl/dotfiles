@@ -27,15 +27,17 @@
   [[default]]
     palette = "#71e2ff:#dc322f:#859900:#00d8b4:#268bd2:#d33682:#0dce00:#eee8d5:#b6f0ff:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     background_image = None
-    custom_command = terminator --working-dir=/home/stefan/shortcuts
+    background_darkness = 0.94
     urgent_bell = True
+    background_type = transparent
     use_system_font = False
-    cursor_color = "#ffffff"
-    foreground_color = "#ff58db"
+    cursor_color = "#e7e7e7"
+    foreground_color = "#ffffff"
     scroll_on_output = False
     show_titlebar = False
+    custom_command = terminator --working-dir=/home/stefan/shortcuts
     font = DejaVu Sans Mono 14
-    background_color = "#181818"
+    background_color = "#010022"
     scrollback_infinite = True
 [layouts]
   [[default]]

@@ -1,28 +1,42 @@
 [global_config]
-  inactive_color_offset = 0.74
-  suppress_multiple_term_dialog = True
   title_transmit_bg_color = "#000000"
+  inactive_color_offset = 0.74
   title_transmit_fg_color = "#00ff05"
+  suppress_multiple_term_dialog = True
 [keybindings]
-  close_term = <Shift><Alt>w
-  copy = <Shift><Alt>i
-  go_down = <Alt>k
-  go_left = <Alt>j
-  go_prev = <Primary>e
-  go_right = <Alt>l
-  go_up = <Alt>i
-  new_tab = <Primary>t
-  next_tab = <Primary>Tab
-  paste = <Shift><Alt>p
-  prev_tab = <Primary><Shift>Tab
-  resize_down = <Alt>Down
-  resize_left = <Alt>Left
-  resize_right = <Alt>Right
-  resize_up = <Alt>Up
-  search = <Shift><Alt>f
-  split_horiz = <Shift><Alt>o
-  split_vert = <Shift><Alt>e
   toggle_zoom = <Shift><Alt>m
+  search = <Shift><Alt>f
+  copy = <Shift><Alt>i
+  paste = <Shift><Alt>p
+  go_up = <Alt>i
+  resize_up = <Alt>Up
+  resize_left = <Alt>Left
+  split_horiz = <Shift><Alt>o
+  go_prev = <Primary>e
+  prev_tab = <Primary><Shift>Tab
+  go_down = <Alt>k
+  close_term = <Shift><Alt>w
+  split_vert = <Shift><Alt>e
+  go_right = <Alt>l
+  new_tab = <Primary>t
+  go_left = <Alt>j
+  resize_right = <Alt>Right
+  resize_down = <Alt>Down
+  next_tab = <Primary>Tab
+[profiles]
+  [[default]]
+    palette = "#71e2ff:#dc322f:#859900:#00d8b4:#268bd2:#d33682:#0dce00:#eee8d5:#b6f0ff:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    background_image = None
+    custom_command = terminator --working-dir=/home/stefan/shortcuts
+    urgent_bell = True
+    use_system_font = False
+    cursor_color = "#ffffff"
+    foreground_color = "#ff58db"
+    scroll_on_output = False
+    show_titlebar = False
+    font = DejaVu Sans Mono 14
+    background_color = "#181818"
+    scrollback_infinite = True
 [layouts]
   [[default]]
     [[[child1]]]
@@ -69,17 +83,3 @@
       profile = default
       type = Terminal
 [plugins]
-[profiles]
-  [[default]]
-    background_color = "#181818"
-    background_image = None
-    cursor_color = "#ffffff"
-    custom_command = terminator --working-dir=/home/stefan/shortcuts
-    font = Noto Mono 14
-    foreground_color = "#ff58db"
-    palette = "#71e2ff:#dc322f:#859900:#00d8b4:#268bd2:#d33682:#0dce00:#eee8d5:#b6f0ff:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    scroll_on_output = False
-    scrollback_infinite = True
-    show_titlebar = False
-    urgent_bell = True
-    use_system_font = False

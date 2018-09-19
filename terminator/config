@@ -33,10 +33,11 @@
     use_system_font = False
     cursor_color = "#e7e7e7"
     foreground_color = "#ffffff"
+    use_custom_command = True
     scroll_on_output = False
     show_titlebar = False
-    custom_command = terminator --working-dir=/home/stefan/shortcuts
-    font = DejaVu Sans Mono 14
+    custom_command = tmux attach -t base 2>/dev/null || tmux new -s base
+    font = Liberation Mono 14
     background_color = "#010022"
     scrollback_infinite = True
 [layouts]

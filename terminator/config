@@ -101,8 +101,8 @@
     background_image = /home/stefan/pictures/backgrounds/purple-bubbles.jpeg
     background_type = image
     cursor_blink = False
-    cursor_color = "#e7e7e7"
-    cursor_shape = ibeam
+    cursor_color = "#e90101"
+    cursor_shape = underline
     custom_command = tmux attach -t base 2>/dev/null || tmux new -s base || zsh || bash || sh
     font = Liberation Mono 14
     foreground_color = "#ffffff"

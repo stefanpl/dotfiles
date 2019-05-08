@@ -12,6 +12,16 @@
 set $win Mod4
 set $alt Mod1
 
+set $communicationWorkspace 5
+set $lowerWorkspace 2
+set $togglWorkspace 7
+set $lowerTerminalTitle "lower terminal"
+
+set $topScreen DP2-2
+set $bottomScreen DP2-3
+
+exec zsh -c screensTwoMains
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:monospace 8
@@ -65,7 +75,7 @@ bindsym $win+h split h
 bindsym $win+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $win+f fullscreen toggle
+bindsym $win+m fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $win+s layout stacking
@@ -144,7 +154,7 @@ bindsym $win+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        tray_output primary
+		tray_output $topScreen
 }
 
 # Various scripts 
@@ -154,3 +164,18 @@ bindsym $win+Shift+Control+$alt+F3 exec zsh -c screensLaptopOnly
 
 # Applications
 bindsym $win+a exec /bin/zsh -c 'i3-msg \[class="Caja"\] focus | grep "success..true" || caja'
+bindsym $win+f [title=$lowerTerminalTitle] focus
+
+# Assignments 
+assign [class="Slack"] $communicationWorkspace
+assign [title=$lowerTerminalTitle] $lowerWorkspace
+for_window [class="Google-chrome" title="Toggl"] move container to workspace $togglWorkspace
+
+
+# Startup applications
+exec zsh -c chromeDidNotCrash
+exec google-chrome chrome://newtab
+exec google-chrome --new-window https://toggl.com/app/timer
+exec terminator --title $lowerTerminalTitle --profile="No Blink"
+exec slack
+

@@ -15,12 +15,12 @@ set $alt Mod1
 set $communicationWorkspace 5
 set $lowerWorkspace 2
 set $togglWorkspace 7
-set $lowerTerminalTitle "lower terminal"
 
+set $floatingTerminatorTitle "Ready when you are" 
 set $topScreen DP2-2
 set $bottomScreen DP2-3
 
-exec zsh -c screensTwoMains
+exec zsh -c screensOneMain
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -38,19 +38,21 @@ font pango:DejaVu Sans Mono 8
 # font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$win to drag floating windows to their wanted position
-floating_modifier $win
-
+floating_modifier control
+workspace_layout tabbed
 focus_follows_mouse no
 
+
 # start a terminal
-bindsym $win+Return exec terminator
+bindsym $win+Return exec synapse
 
 # kill focused window
 bindsym $win+Shift+q kill
 bindsym $alt+F4 kill
 
-# start dmenu (a program launcher)
-bindsym $win+d exec dmenu_run
+bindsym $win+d exec google-chrome chrome://newtab
+bindsym $win+e exec terminator
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -78,9 +80,9 @@ bindsym $win+v split v
 bindsym $win+m fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $win+s layout stacking
-bindsym $win+w layout tabbed
-bindsym $win+e layout toggle split
+bindsym $win+udiaeresis layout stacking
+bindsym $win+adiaeresis layout tabbed
+bindsym $win+ssharp layout toggle split
 
 # toggle tiling / floating
 bindsym $win+Shift+space floating toggle
@@ -90,13 +92,16 @@ bindsym $win+space focus mode_toggle
 
 # focus the parent container
 bindsym $win+p focus parent
+bindsym $win+shift+p focus child
 
 # focus the child container
 #bindsym $win+d focus child
 
 # switch to workspace
 bindsym $win+o workspace next
+bindsym $win+shift+o move container to workspace next ; workspace next
 bindsym $win+u workspace prev
+bindsym $win+shift+u move container to workspace prev ; workspace prev
 bindsym $win+1 workspace 1
 bindsym $win+2 workspace 2
 bindsym $win+3 workspace 3
@@ -148,7 +153,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $win+r mode "resize"
+bindsym $win+shift+Return mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -164,18 +169,24 @@ bindsym $win+Shift+Control+$alt+F3 exec zsh -c screensLaptopOnly
 
 # Applications
 bindsym $win+a exec /bin/zsh -c 'i3-msg \[class="Caja"\] focus | grep "success..true" || caja'
-bindsym $win+f [title=$lowerTerminalTitle] focus
+bindsym $win+r exec /home/stefan/webdev/various-scripts/bruce-function-execution.sh i3-focus-or-open-window 'title=$floatingTerminatorTitle' 'terminator --title $floatingTerminatorTitle' >> /tmp/i3log.txt 2>&1
 
 # Assignments 
 assign [class="Slack"] $communicationWorkspace
+assign [class="Code"] 1
 assign [title=$lowerTerminalTitle] $lowerWorkspace
 for_window [class="Google-chrome" title="Toggl"] move container to workspace $togglWorkspace
+for_window [title=$floatingTerminatorTitle] floating enable
 
+workspace 1 output $topScreen
+workspace $lowerWorkspace output $bottomScreen
 
 # Startup applications
 exec zsh -c chromeDidNotCrash
-exec google-chrome chrome://newtab
+exec --no-startup-id i3-msg 'workspace 1; exec zsh -c ~/webdev/various-scripts/start-chrome-in-debug-mode.sh'
+exec --no-startup-id i3-msg 'workspace 1; exec terminator'
+exec --no-startup-id i3-msg 'workspace bruce; exec terminator'
+exec --no-startup-id seafile-applet
 exec google-chrome --new-window https://toggl.com/app/timer
-exec terminator --title $lowerTerminalTitle --profile="No Blink"
 exec slack
 

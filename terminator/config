@@ -95,6 +95,24 @@
     show_titlebar = False
     urgent_bell = True
     use_system_font = False
+  [[No Exit]]
+    background_color = "#010017"
+    background_darkness = 0.9
+    background_image = /home/stefan/pictures/backgrounds/purple-bubbles.jpeg
+    background_type = image
+    cursor_color = "#e7e7e7"
+    custom_command = tmux attach -t base 2>/dev/null || tmux new -s base || zsh || bash || sh
+    exit_action = restart
+    font = Liberation Mono 14
+    foreground_color = "#ffffff"
+    palette = "#000000:#ff6c69:#00e336:#00d8b4:#268bd2:#d33682:#0dce00:#eee8d5:#69d8ff:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scroll_background = False
+    scroll_on_output = False
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    urgent_bell = True
+    use_system_font = False
   [[No Blink]]
     background_color = "#010017"
     background_darkness = 0.9

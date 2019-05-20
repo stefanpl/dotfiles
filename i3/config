@@ -15,6 +15,7 @@ set $alt Mod1
 set $communicationWorkspace 5
 set $lowerWorkspace 2
 set $togglWorkspace 7
+set $musicWorkspace 9
 
 set $floatingTerminatorTitle "Ready when you are" 
 set $topScreen DP2-2
@@ -169,24 +170,27 @@ bindsym $win+Shift+Control+$alt+F3 exec zsh -c screensLaptopOnly
 
 # Applications
 bindsym $win+a exec /bin/zsh -c 'i3-msg \[class="Caja"\] focus | grep "success..true" || caja'
-bindsym $win+r exec /home/stefan/webdev/various-scripts/bruce-function-execution.sh i3-focus-or-open-window 'title=$floatingTerminatorTitle' 'terminator --title $floatingTerminatorTitle' >> /tmp/i3log.txt 2>&1
+bindsym $win+r exec /bin/zsh -c 'i3-msg scratchpad show | grep "success..true" || terminator --title=$floatingTerminatorTitle --profile="No Exit"'
+# bindsym $win+r exec /home/stefan/webdev/various-scripts/bruce-function-execution.sh i3-focus-or-open-window 'title=$floatingTerminatorTitle' 'terminator --title $floatingTerminatorTitle' >> /tmp/i3log.txt 2>&1
 
 # Assignments 
 assign [class="Slack"] $communicationWorkspace
 assign [class="Code"] 1
 assign [title=$lowerTerminalTitle] $lowerWorkspace
 for_window [class="Google-chrome" title="Toggl"] move container to workspace $togglWorkspace
-for_window [title=$floatingTerminatorTitle] floating enable
+for_window [title=$floatingTerminatorTitle] move scratchpad
+for_window [Class="Spotify"] move container to workspace $musicWorkspace
+for_window [title="Online Boxing Timer"] move container to workspace $musicWorkspace
 
 workspace 1 output $topScreen
 workspace $lowerWorkspace output $bottomScreen
 
 # Startup applications
 exec zsh -c chromeDidNotCrash
-exec --no-startup-id i3-msg 'workspace 1; exec zsh -c ~/webdev/various-scripts/start-chrome-in-debug-mode.sh'
+exec --no-startup-id i3-msg 'workspace 1; exec zsh -c ~/webdev/various-scripts/start-chrome-in-debug-mode.sh > /tmp/sid.out 2>&1'
 exec --no-startup-id i3-msg 'workspace 1; exec terminator'
-exec --no-startup-id i3-msg 'workspace bruce; exec terminator'
 exec --no-startup-id seafile-applet
-exec google-chrome --new-window https://toggl.com/app/timer
-exec slack
+exec terminator --title="$floatingTerminatorTitle"
+# exec google-chrome --new-window https://toggl.com/app/timer
+exec --no-startup-id slack
 

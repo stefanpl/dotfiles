@@ -99,6 +99,10 @@ bindsym $win+shift+p focus child
 #bindsym $win+d focus child
 
 # switch to workspace
+bindsym Next exec playerctl next
+bindsym Prior exec playerctl previous
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 bindsym $win+o workspace next
 bindsym $win+shift+o move container to workspace next ; workspace next
 bindsym $win+u workspace prev
@@ -167,6 +171,7 @@ bar {
 bindsym $win+Shift+Control+$alt+F1 exec zsh -c screensTwoMains
 bindsym $win+Shift+Control+$alt+F2 exec zsh -c screensOneMain
 bindsym $win+Shift+Control+$alt+F3 exec zsh -c screensLaptopOnly
+bindsym XF86Display exec zsh -c screensLaptopOnly
 
 # Applications
 bindsym $win+a exec /bin/zsh -c 'i3-msg \[class="Caja"\] focus | grep "success..true" || caja'

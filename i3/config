@@ -18,6 +18,7 @@ set $togglWorkspace 7
 set $musicWorkspace 9
 
 set $floatingTerminatorTitle "Ready when you are" 
+set $tmuxTerminatorTitle "tmux terminal" 
 set $topScreen DP2-2
 set $bottomScreen DP2-3
 
@@ -39,20 +40,22 @@ font pango:DejaVu Sans Mono 8
 # font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$win to drag floating windows to their wanted position
-floating_modifier control
+floating_modifier $win
 workspace_layout tabbed
 focus_follows_mouse no
 
 
 # start a terminal
 bindsym $win+Return exec synapse
+bindsym $win+n exec shutter -s
+
 
 # kill focused window
 bindsym $win+Shift+q kill
 bindsym $alt+F4 kill
 
 bindsym $win+d exec google-chrome chrome://newtab
-bindsym $win+e exec terminator
+bindsym $win+e exec "zsh -c 'bruce show-tmux-terminal'"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -119,16 +122,16 @@ bindsym $win+9 workspace 9
 bindsym $win+0 workspace 10
 
 # move focused container to workspace
-bindsym $win+Shift+1 move container to workspace 1
-bindsym $win+Shift+2 move container to workspace 2
-bindsym $win+Shift+3 move container to workspace 3
-bindsym $win+Shift+4 move container to workspace 4
-bindsym $win+Shift+5 move container to workspace 5
-bindsym $win+Shift+6 move container to workspace 6
-bindsym $win+Shift+7 move container to workspace 7
-bindsym $win+Shift+8 move container to workspace 8
-bindsym $win+Shift+9 move container to workspace 9
-bindsym $win+Shift+0 move container to workspace 10
+bindsym $win+Shift+1 move container to workspace 1; workspace 1
+bindsym $win+Shift+2 move container to workspace 2; workspace 2
+bindsym $win+Shift+3 move container to workspace 3; workspace 3
+bindsym $win+Shift+4 move container to workspace 4; workspace 4
+bindsym $win+Shift+5 move container to workspace 5; workspace 5
+bindsym $win+Shift+6 move container to workspace 6; workspace 6
+bindsym $win+Shift+7 move container to workspace 7; workspace 7
+bindsym $win+Shift+8 move container to workspace 8; workspace 8
+bindsym $win+Shift+9 move container to workspace 9; workspace 9
+bindsym $win+Shift+0 move container to workspace 10; workspace 10
 
 # reload the configuration file
 bindsym $win+Shift+c reload
@@ -164,6 +167,7 @@ bindsym $win+shift+Return mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+		tray_output $topScreen
 }
 
 # Various scripts 
@@ -179,7 +183,7 @@ bindsym $win+r exec /bin/zsh -c 'i3-msg scratchpad show | grep "success..true" |
 
 # Assignments 
 assign [class="Slack"] $communicationWorkspace
-assign [class="Code"] 1
+# assign [class="REAPER"] "Schall und Rauch"
 assign [title=$lowerTerminalTitle] $lowerWorkspace
 for_window [class="Google-chrome" title="Toggl"] move container to workspace $togglWorkspace
 for_window [title=$floatingTerminatorTitle] move scratchpad
@@ -191,10 +195,13 @@ workspace $lowerWorkspace output $bottomScreen
 
 # Startup applications
 exec zsh -c chromeDidNotCrash
+exec zsh -c start-bruce
 exec --no-startup-id i3-msg 'workspace 1; exec zsh -c ~/webdev/various-scripts/start-chrome-in-debug-mode.sh > /tmp/sid.out 2>&1'
-exec --no-startup-id i3-msg 'workspace 1; exec terminator'
+exec --no-startup-id i3-msg 'workspace 1; exec terminator --title=$tmuxTerminatorTitle --profile="Tmux Forever"'
 exec --no-startup-id seafile-applet
 exec terminator --title="$floatingTerminatorTitle"
 # exec google-chrome --new-window https://toggl.com/app/timer
 exec --no-startup-id slack
 
+# colors
+client.focused_inactive #333333 #285577 #FFFFFF #484E50 #5F676A

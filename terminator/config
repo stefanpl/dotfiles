@@ -11,7 +11,7 @@
   go_prev = <Primary>e
   go_right = <Alt>l
   go_up = <Alt>i
-  new_tab = <Primary>t
+  new_tab = None
   next_tab = <Primary>Tab
   paste = <Shift><Alt>p
   prev_tab = <Primary><Shift>Tab

@@ -178,7 +178,7 @@ bindsym XF86Display exec zsh -c screensLaptopOnly
 
 bindsym $win+$alt+p exec i3lock
 
-bindsym $win+t exec zsh -c 'ns "`tt --clean`"'
+bindsym $win+y exec zsh -c 'ns "`tt --clean`"'
 
 # Applications
 bindsym $win+a exec /bin/zsh -c 'i3-msg \[class="Caja"\] focus | grep "success..true" || caja'

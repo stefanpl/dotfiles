@@ -179,6 +179,8 @@ bindsym XF86Display exec zsh -c screensLaptopOnly
 bindsym $win+$alt+p exec i3lock
 
 bindsym $win+y exec zsh -c 'ns "`tt --clean`"'
+bindsym XF86AudioLowerVolume exec zsh -c 'ns -t 500 "🔊 Vol at `amixer -D pulse sset Master 3%- gr -o "[0-9]+%" | uniq`"'
+bindsym XF86AudioRaiseVolume exec zsh -c 'ns -t 500 "🔊 Vol at `amixer -D pulse sset Master 3%+ gr -o "[0-9]+%" | uniq`"'
 
 # Applications
 bindsym $win+a exec /bin/zsh -c 'i3-msg \[class="Caja"\] focus | grep "success..true" || caja'

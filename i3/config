@@ -21,6 +21,7 @@ set $floatingTerminatorTitle "Ready when you are"
 set $tmuxTerminatorTitle "tmux terminal" 
 set $topScreen DP2-2
 set $bottomScreen DP2-3
+set $laptopScreen eDP1
 
 exec zsh -c screensOneMain
 

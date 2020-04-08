@@ -88,7 +88,7 @@
     exit_action = restart
     font = Liberation Mono 14
     foreground_color = "#ffffff"
-    palette = "#000000:#ff6c69:#00e336:#00d8b4:#268bd2:#d33682:#0dce00:#eee8d5:#69d8ff:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    palette = "#2e3436:#e81d00:#65d000:#ffae00:#3465a4:#75507b:#00cdc8:#d3d7cf:#555753:#f54848:#3dff00:#fce94f:#729fcf:#ad7fa8:#00ffd7:#eeeeec"
     scroll_background = False
     scroll_on_output = False
     scrollback_infinite = True
@@ -108,7 +108,7 @@
     custom_command = tmux attach -t base 2>/dev/null || tmux new -s base || zsh || bash || sh
     font = Liberation Mono 14
     foreground_color = "#ffffff"
-    palette = "#000000:#ff6c69:#00e336:#00d8b4:#268bd2:#d33682:#0dce00:#eee8d5:#69d8ff:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    palette = "#2e3436:#e81d00:#65d000:#ffae00:#3465a4:#75507b:#00cdc8:#d3d7cf:#555753:#f54848:#3dff00:#fce94f:#729fcf:#ad7fa8:#00ffd7:#eeeeec"
     scroll_background = False
     scroll_on_output = False
     scrollback_infinite = True
@@ -126,7 +126,7 @@
     exit_action = restart
     font = Liberation Mono 14
     foreground_color = "#ffffff"
-    palette = "#000000:#ff6c69:#00e336:#00d8b4:#268bd2:#d33682:#0dce00:#eee8d5:#69d8ff:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    palette = "#2e3436:#e81d00:#65d000:#ffae00:#3465a4:#75507b:#00cdc8:#d3d7cf:#555753:#f54848:#3dff00:#fce94f:#729fcf:#ad7fa8:#00ffd7:#eeeeec"
     scroll_background = False
     scroll_on_output = False
     scrollback_infinite = True
@@ -144,7 +144,7 @@
     exit_action = restart
     font = Liberation Mono 14
     foreground_color = "#ffffff"
-    palette = "#000000:#ff6c69:#00e336:#00d8b4:#268bd2:#d33682:#0dce00:#eee8d5:#69d8ff:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    palette = "#2e3436:#e81d00:#65d000:#ffae00:#3465a4:#75507b:#00cdc8:#d3d7cf:#555753:#f54848:#3dff00:#fce94f:#729fcf:#ad7fa8:#00ffd7:#eeeeec"
     scroll_background = False
     scroll_on_output = False
     scrollback_infinite = True

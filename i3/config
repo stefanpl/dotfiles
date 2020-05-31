@@ -173,11 +173,11 @@ bar {
 
 # Various scripts 
 bindsym $win+Shift+Control+$alt+F1 exec zsh -c screensTwoMains
-bindsym $win+Shift+Control+$alt+F2 exec zsh -c screensOneMain
+bindsym $win+Shift+Control+$alt+F2 exec zsh -c screensIiyama
 bindsym $win+Shift+Control+$alt+F3 exec zsh -c screensLaptopOnly
 bindsym XF86Display exec zsh -c screensLaptopOnly
 
-bindsym $win+$alt+p exec i3lock
+bindsym $win+$alt+p exec i3lock -i ~/pictures/backgrounds/led-schema.png
 
 bindsym $win+y exec zsh -c 'ns "`tt --clean`"'
 bindsym XF86AudioLowerVolume exec zsh -c 'ns -t 500 "🔊 Vol at `amixer -D pulse sset Master 3%- gr -o "[0-9]+%" | uniq`"'
@@ -201,6 +201,7 @@ workspace 1 output $topScreen
 workspace $lowerWorkspace output $bottomScreen
 
 # Startup applications
+exec nm-applet
 exec zsh -c chromeDidNotCrash
 exec zsh -c start-bruce
 exec --no-startup-id i3-msg 'workspace 1; exec zsh -c ~/webdev/various-scripts/start-chrome-in-debug-mode.sh > /tmp/sid.out 2>&1'

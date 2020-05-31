@@ -1,10 +1,7 @@
 #!/bin/bash
 set -e
-scriptDirectory=$( dirname ${BASH_SOURCE[0]}  )
 pushd ${scriptDirectory} > /dev/null
 genericFilename="ergodox-ez-firmware.hex"
-
-trap "popd > /dev/null" EXIT
 
 filename=`find . -name "ergodox_ez_*"`
 resultCount=`echo "$filename" | wc -l`

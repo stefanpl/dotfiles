@@ -6,11 +6,12 @@
 [keybindings]
   close_term = <Shift><Alt>w
   copy = <Shift><Alt>i
-  go_down = <Alt>k
-  go_left = <Alt>j
+  go_down = None
+  go_left = None
   go_prev = <Primary>e
-  go_right = <Alt>l
-  go_up = <Alt>i
+  go_right = None
+  go_up = None
+  layout_launcher = None
   new_tab = None
   next_tab = <Primary>Tab
   paste = <Shift><Alt>p
@@ -88,7 +89,7 @@
     exit_action = restart
     font = Liberation Mono 14
     foreground_color = "#ffffff"
-    palette = "#2e3436:#e81d00:#65d000:#ffae00:#3465a4:#75507b:#00cdc8:#d3d7cf:#555753:#f54848:#3dff00:#fce94f:#729fcf:#ad7fa8:#00ffd7:#eeeeec"
+    palette = "#2e3436:#e81d00:#65d000:#ffae00:#79a6e1:#75507b:#00cdc8:#d3d7cf:#555753:#f54848:#3dff00:#fce94f:#729fcf:#ad7fa8:#00ffd7:#eeeeec"
     scroll_background = False
     scroll_on_output = False
     scrollback_infinite = True
@@ -135,7 +136,6 @@
     urgent_bell = True
     use_system_font = False
   [[Tmux Forever]]
-    background_color = "#ffffff"
     background_darkness = 0.0
     background_image = /home/stefan/pictures/backgrounds/nvon_black.png
     background_type = image
@@ -144,7 +144,7 @@
     exit_action = restart
     font = Liberation Mono 14
     foreground_color = "#ffffff"
-    palette = "#2e3436:#e81d00:#65d000:#ffae00:#3465a4:#75507b:#00cdc8:#d3d7cf:#555753:#f54848:#3dff00:#fce94f:#729fcf:#ad7fa8:#00ffd7:#eeeeec"
+    palette = "#2e3436:#e81d00:#65d000:#ffae00:#8cf6ff:#75507b:#00cdc8:#d3d7cf:#555753:#f54848:#3dff00:#fce94f:#729fcf:#ad7fa8:#00ffd7:#eeeeec"
     scroll_background = False
     scroll_on_output = False
     scrollback_infinite = True
